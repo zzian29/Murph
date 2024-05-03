@@ -1,0 +1,10 @@
+// This folder contains info and material relevant to any additions/accessories that we're
+   working on or have completed for our smart car final demo //
+
+Ideas
+- Odometer
+- IR remote control
+- Infinite run mode
+- Servo ultrasonic radar
+- Buzzer for various notifications
+- Status LEDs (RGB LED?) (Stopped/waiting, Barrier proximity detected, Line not detected, correcting, etc)
