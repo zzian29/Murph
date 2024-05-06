@@ -33,8 +33,10 @@ void setup() {
 
 void loop() {
   // Declare array to hold each numeral place
+  static unsigned char mux = 0;
+  unsigned char distTraveled;
   const unsigned char n = 3;
-  unsigned char digit[n] = {((potVal / 100) % 10), ((potVal / 10) % 10), (potVal % 10)};
+  unsigned char digit[n] = {((distTraveled / 100) % 10), ((distTraveled / 10) % 10), (distTraveled % 10)};
 
   odometer(digit[mux]); // INSERT INTO MUX LOOP
   // _delay_ms(5);    // Small delay for legibility, uncomment if needed
