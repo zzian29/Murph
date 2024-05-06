@@ -34,10 +34,9 @@ void setup() {
 void loop() {
   // Declare array to hold each numeral place
   const unsigned char n = 3;
-  const unsigned char f = 4;
   unsigned char digit[n] = {((potVal / 100) % 10), ((potVal / 10) % 10), (potVal % 10)};
 
-  odometer(digit[mux]); // INSERT INTO MUX LOOP WITH DELAY
+  odometer(digit[mux]); // INSERT INTO MUX LOOP
   // _delay_ms(5);    // Small delay for legibility, uncomment if needed
 }
 
@@ -50,5 +49,5 @@ void odometer(unsigned char numeral) {
 
   // Clear and set PORTC pins
   PORTC &= 0xCF;
-  PORTC |= ((numeral & 0x03) << 4);
+  PORTC |= ((numeral & 0x0C) << 4);
 }
