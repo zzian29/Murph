@@ -3,6 +3,7 @@
   Displays potentiometer value on 4x7-segment display
   Written by Colin Cain
   AS OF 5-6-24 THIS CIRCUIT WORKS
+  Copy / paste as necessary, most variables already exist in main code
   05-06-24
   I/O Pins
   A0: Potentiometer Input
@@ -50,6 +51,7 @@ void setup() {
 
 void loop() {
   // Declare array to hold each numeral place
+  unsigned char distTraveled = 0;
   static unsigned char mux = 0;
   const unsigned char n = 3;
   unsigned char digit[n] = {((distTraveled / 100) % 10), ((distTraveled / 10) % 10), (distTraveled % 10)};
